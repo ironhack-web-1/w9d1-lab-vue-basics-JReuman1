@@ -9,23 +9,19 @@
   </div>
 
   <div class="opeacion">El resultado de 10 + 10 = {{ vresult }}</div>
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <div class="vbutton">
     <button v-on:click="vresult += 1">Suma 1 al resultado</button>
     <button v-on:click="vresult -= 1">Resta 1 al resultado</button>
   </div>
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <h3>El valor actual es: {{ vresult }}</h3>
   <div v-if="vresult === 20">
     <h4>Esta sección solo se mostrara si la variable es 20</h4>
   </div>
-
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <div>
     <form @submit = "submit">
@@ -34,29 +30,26 @@
       <InputText v-model="aboutMe" placeholder="About Me" />
     </form>
 
+    <br><br>
+
     <div>Name: {{ name }}</div>
     <div>email: {{ email }}</div>
     <div>AboutMe: {{ aboutMe }}</div>
 
   </div>
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <div v-for="(data, index) in vdata" :key="index">
     El UUID es: {{ vdata[index].uuid }} <br />
     El nombre es: {{ vdata[index].name }} <br />
     La descripción es: {{ vdata[index].description }} <hr /><br />
   </div>
-
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <div class="vbutton">
     <button v-on:click="dissapear" >Cambia el color de fondo</button>
   </div>
-  
-  <hr />
-  <hr />
+  <hr /><hr />
 
   <div>
     <footer>
