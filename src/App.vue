@@ -27,7 +27,18 @@
   <hr />
   <hr />
 
-  <div class="string">{{ vstring }}</div>
+  <div>
+    <form @submit = "submit">
+      <InputText v-model="name" placeholder="Name" />
+      <InputText v-model="email" placeholder="Email" type="email" />
+      <InputText v-model="aboutMe" placeholder="About Me" />
+    </form>
+
+    <div>Name: {{ name }}</div>
+    <div>email: {{ email }}</div>
+    <div>AboutMe: {{ aboutMe }}</div>
+
+  </div>
   <hr />
   <hr />
 
@@ -57,12 +68,19 @@
 </template>
 
 <script>
+import InputText from "./components/InputText";
 export default {
   name: "App",
+  components: {
+    InputText,
+  },
   data() {
     return {
       vresult: 10 + 10,
       vstring: "Esta es una app de VUE",
+      name: null,
+      email: null,
+      aboutMe: null,
       vdata: [
         {
           uuid: "4",
