@@ -1,5 +1,5 @@
 <template>
-  <div id="colorchanger" :style= "backgroundColor">
+  <div id="colorchanger" :style= "backgroundColor()">
     <div class="head">
       <header>
         <img alt="Vue logo" src="./assets/logo.png" />
@@ -130,8 +130,8 @@ export default {
   },
   methods: {
     backgroundColor() {
-      if (this.vstatus % 2 === 0) {
-        return { "background": "black" };
+      if (this.vstatus % 2 !== 0) {
+        return {"background": "black"};
       }
     },
   },
@@ -140,7 +140,6 @@ export default {
 
 <style>
 #colorchanger {
-  background-color: 0;
 }
 
 #app {
